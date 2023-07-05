@@ -1,0 +1,52 @@
+$font-family: "oxygen";
+$font-family2: "sans-serif";
+$font-family3: "system-ui";
+$white-color: #fff;
+$black-color: #000;
+$voilet-color: #5c2390;
+
+.Footer {
+    width: 100%;
+}
+.mainFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1% 6%;
+    background-color: $voilet-color;
+}
+.mainFooter .left {
+    color: $white-color;
+    margin-left: 3%;
+    letter-spacing: 1px;
+    font-family: $font-family;
+    font-size: 1.1rem;
+}
+.mainFooter .right{
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+}
+.mainFooter .right svg{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+@media(max-width:600px){
+    .mainFooter {
+        flex-direction: column-reverse;
+        justify-content: center;
+        background-color: #622c94;
+        align-items: center;
+        padding: 2% 3%;
+    }
+    .mainFooter .right {
+        line-height: 3;
+    }
+    .mainFooter .left {
+        line-height: 1.5;
+    }
+    .mainFooter .right svg {
+        font-size: 1.5rem;
+    }
+}

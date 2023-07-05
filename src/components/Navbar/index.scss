@@ -1,0 +1,270 @@
+$font-family:"oxygen";
+$white-color:#fff;
+$black-color:#000;
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    z-index: 2;
+    padding: 1.2% 5%;
+    background-color: transparent;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.activeBg{
+    background-color: #551a87;
+    transition: 250ms ease-in-out;
+}
+.Navbar .name {
+    width: 15%;
+    font-size: 1.8rem;
+    color: white;
+    font-family: "oxygen";
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.Navbar .menu {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: center;
+}
+.Navbar .menuCover {
+    width: 10%;
+    display: none;
+}
+.Navbar .contained {
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+
+.Navbar .contained .lines1 {
+    width: 35px;
+    height: 3px;
+    border-radius: 15px;
+    background: white;
+    transition: 300ms ease-in-out;
+}
+.Navbar .contained .lines2 {
+    width: 35px;
+    height: 3px;
+    border-radius: 15px;
+    background: white;
+}
+.Navbar .contained .lines3 {
+    width: 35px;
+    height: 3px;
+    border-radius: 15px;
+    background: white;
+    transition: 300ms ease-in-out;
+}
+.Navbar .contained:hover .lines1{
+    margin-left: 25%;
+    transition: 300ms ease-in-out;
+}
+.Navbar .contained:hover .lines3{
+    margin-left: -25%;
+    transition: 300ms ease-in-out;
+}
+
+.Navbar .menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.Navbar .menu ul a {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    color: $white-color;
+    font-size: 1.3rem;
+    position: relative;
+    font-family: $font-family;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: -webkit-match-parent;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-transform: none;
+    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        height: 0.3vw;
+        display: block;
+        transition: all 0.6s ease-in-out;
+        bottom: -40%;
+    }
+    &:hover::after{
+        width: 0%;
+        height: 0.3vw;
+        background-color: white;
+        border-radius: 5px;
+        animation: liAnimation 1000ms forwards;
+    }
+}
+
+@keyframes liAnimation {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+// .Navbar .menu ul li a {
+//     text-decoration: none;
+//     color: #fff;
+//     transition: 250ms ease-in-out;
+// }
+
+// moible View Css start here 
+.mobileView {
+    width: 60%;
+    background: #551a87;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    right: -100vw;
+    animation: mobileViewOpen 900ms forwards;
+}
+@media(min-width:600px){
+    .mobileView{
+        display: none;
+    }
+}
+
+@keyframes mobileViewOpen {
+    0%{
+        right: -100vw;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes mobileViewClose {
+    0%{
+        left: 0vw;
+    }
+    100%{
+        left: -60vw;
+    }
+}
+
+
+.mobileView .mainMobileView {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 5%;
+}
+.mobileView .mainMobileView .crossButton {
+    display: flex;
+    justify-content: flex-end;
+}
+.mobileView .mainMobileView .crossButton svg {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 6%;
+    margin-right: 3%;
+    cursor: pointer;
+    color: white;
+    transition: 750ms ease-in-out;
+    &:hover{
+        transform: rotate(360deg);
+    }
+}
+.mobileView .mainMobileView .moibleMenu {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.mobileView .mainMobileView .moibleMenu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.mobileView .mainMobileView .moibleMenu ul a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-family: "oxygen";
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 0.2vw;
+    color: white;
+    line-height: 3;
+   
+}
+
+.mobileView .socilaMediaIcons {
+    padding: 7% 17%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    // margin-bottom: 35%;
+}
+.mobileView .socilaMediaIcons svg {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+@media(max-width:991px){
+    .Navbar .menu ul li {
+        font-size: 1.8rem;
+    }
+}
+@media(max-width:768px){
+    .Navbar .menu ul li {
+        font-size: 1.8rem;
+    }
+    .Navbar .name {
+        width: 15%;
+        font-size: 1.7rem;
+        margin-top: 1%;
+    }
+    .Navbar .menu ul {
+        gap: 2.5rem;
+        padding: 0;
+    }
+}
+
+
+
+@media(max-width:600px){
+    .Navbar {
+        padding: 2.5% 5%;
+        width: 91%;
+    }
+    .Navbar .contained {
+        height: 68%;
+        margin-top: 16%;
+    }
+    .Navbar .menu {
+        display: none;
+    }
+    
+    .Navbar .menuCover {
+        display: block;
+    }
+    
+
+}
+
