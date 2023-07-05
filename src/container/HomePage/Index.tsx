@@ -458,7 +458,13 @@ const ChangeDivSection = ({ elem, changeComponent }: any) => {
             openDiv();
           }}
         >
-          <img src={elem.img} alt="" className="images" />
+          <img
+            src={elem.img}
+            alt=""
+            className="images"
+            width={50}
+            height={50}
+          />
           <div className="content">{elem.title}</div>
           <div
             className="shares"
