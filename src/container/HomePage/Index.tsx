@@ -391,8 +391,8 @@ const HomePage = () => {
               rel="noreferrer"
             >
               <FiPhoneCall />
-              <a href="tel:+111111111111" target="_blank" rel="noreferrer">
-                Free Call{" "}
+              <a href="tel:+91 8130261696" target="_blank" rel="noreferrer">
+                Free Call
               </a>
             </a>
           </div>
@@ -420,13 +420,13 @@ const HomePage = () => {
         <section className="social">
           <div className="mainSocial">
             <div className="icons">
-              <a href="instagram.com/accounts/onetap/?next=%2F">
+              <a href="https://www.instagram.com/tails__of__joy/?igshid=MzRlODBiNWFlZA%3D%3D">
                 <BsInstagram />
               </a>
               <a href="instagram.com/accounts/onetap/?next=%2F">
                 <CiFacebook />
               </a>
-              <a href="instagram.com/accounts/onetap/?next=%2F">
+              <a href="https://api.whatsapp.com/send/?phone=918130261696&text&type=phone_number&app_absent=0">
                 <ImWhatsapp />
               </a>
               <a href="instagram.com/accounts/onetap/?next=%2F">
